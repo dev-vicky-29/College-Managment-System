@@ -14,6 +14,14 @@
 <link href="/College_Managment_System/css/bootstrap.css" rel="stylesheet"/>
 <link href="/College_Managment_System/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="/College_Managment_System/css/Style.css" rel="stylesheet"/>
+
+<!-- Add this CSS code in the head section or in an external stylesheet -->
+<style>
+  label.error {
+    color: red;
+  }
+</style>
+
 </head>
 <body>
 <!-- Header Section -->

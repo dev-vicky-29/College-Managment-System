@@ -86,7 +86,7 @@
 	</div>
 	<div class="card-body">
 	<!-- HTML FORM -->
-	<form action="" method="post" enctype="multipart/form-data">
+	<form id="FormNT" action="" method="post" enctype="multipart/form-data">
 	<div class="form-group">
 	Support Staff ID
 	<input name="ntid" class="form-control" autofocus value="<%=ntID%>" placeholder="Enter Support Staff ID"/> <!-- Form Row -->
@@ -112,9 +112,43 @@
 </form>
 </div>
 </div>	
-  
-
-
+    
+ <script>
+        $(document).ready(function () {
+            $('#FormNT').validate({
+                rules: {
+                    ntid: {
+                        required: true
+                    },
+                    ntname: {
+                        required: true
+                    },
+                    ntqualification: {
+                        required: true
+                    },
+                    ntimage: {
+                        required: true
+                    }
+                    // Add more rules if needed
+                },
+                messages: {
+                    ntid: {
+                        required: 'Please enter Support Staff ID'
+                    },
+                    ntname: {
+                        required: 'Please enter Support Staff Name'
+                    },
+                    ntqualification: {
+                        required: 'Please enter Support Staff Qualification'
+                    },
+                    ntimage: {
+                        required: 'Please select Teacher Image'
+                    }
+                    // Add more messages if needed
+                }
+            });
+        });
+    </script>
 
 
 <%@ include file="../footer.jsp"%>

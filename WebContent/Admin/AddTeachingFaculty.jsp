@@ -102,7 +102,7 @@
 	</div>
 	<div class="card-body">
 	<!-- HTML FORM -->
-	<form action="" method="post" enctype="multipart/form-data">
+	<form action="" method="post" enctype="multipart/form-data" id="TForm">
 	<div class="form-group">
 	Teacher ID
 	<input name="tid" class="form-control" autofocus value="<%=tID%>" placeholder="Enter Teacher ID"/> 
@@ -141,6 +141,67 @@
 </div>
 </div>	
 
-
  
 <%@ include file="../footer.jsp"%>
+
+<!-- Add this script section after including jQuery -->
+<!-- 
+<script>
+  $(document).ready(function () {
+    // Add validation rules
+    $("#TForm").validate({
+      rules: {
+        tid: {
+          required: true,
+          minlength: 3,
+        },
+        tname: {
+          required: true,
+        },
+        tqualification: {
+          required: true,
+        },
+        tsubject: {
+          required: true,
+        },
+        tLinkedIn: {
+          required: true,
+          url: true,
+        },
+        timage: {
+          required: true,
+        },
+        tresume: {
+          required: true,
+        },
+      },
+      messages: {
+        tid: {
+          required: "Please enter Teacher ID",
+          minlength: "Teacher ID must be at least 3 characters",
+        },
+        tname: {
+          required: "Please enter Teacher Name",
+        },
+        tqualification: {
+          required: "Please enter Teacher Qualification",
+        },
+        tsubject: {
+          required: "Please enter Teacher Subjects",
+        },
+        tLinkedIn: {
+          required: "Please enter Teacher LinkedIn",
+          url: "Please enter a valid LinkedIn URL",
+        },
+        timage: {
+          required: "Please upload Teacher Image",
+        },
+        tresume: {
+          required: "Please upload Teacher Resume",
+        },
+      },
+    });
+  });
+</script>
+
+ -->
