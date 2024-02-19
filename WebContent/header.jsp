@@ -1,7 +1,7 @@
 <%@page import="com.util.db.DataAccess"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
     <%
-	String errorMsg="";
+    String  errorMsg="";
     String successMsg="";
     DataAccess db=new DataAccess();
     %>

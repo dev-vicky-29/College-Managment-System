@@ -11,6 +11,7 @@ public class DataAccess {
 	public Connection cn;
 	public ResultSet rs;
 	
+	
 	public DataAccess()	{
 		
 	}
@@ -105,5 +106,4 @@ public class DataAccess {
 		return rss;
 		
 	}
-	
 }

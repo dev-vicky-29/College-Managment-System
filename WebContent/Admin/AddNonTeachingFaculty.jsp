@@ -103,16 +103,16 @@
 	  <label for="formFile" class="form-label">Teacher Image</label>
  	 <input name="ntimage" class="form-control" value="<%=ntfImgName %>" type="file" id="formFile">
 	</div>
-<div class="mt-2 mb-5 d-flex justify-content-between">
-		<input Type="submit" value="Add Faculty" name="ntbtnadd" class="btn btn-primary"/>
-		<input Type="submit" value="Find Faculty" name="ntbtnfind" class="btn btn-info"/>
+		<div class="mt-2 mb-5 d-flex justify-content-between">
+		<input Type="submit" value="Add Faculty" name="ntbtnadd" id="" class="btn btn-primary"/>
 		<input Type="submit" value="Update Faculty" name="ntbtnupdate" class="btn btn-secondary"/>
+		<input Type="submit" value="Find Faculty" name="ntbtnfind"  class="btn btn-info"/>
 		<input Type="submit" value="Delete Faculty" name="ntbtndelete" class="btn btn-danger"/>	
 </div>
 </form>
 </div>
 </div>	
-    
+    <%@ include file="../footer.jsp"%>
  <script>
         $(document).ready(function () {
             $('#FormNT').validate({
@@ -151,4 +151,3 @@
     </script>
 
 
-<%@ include file="../footer.jsp"%>

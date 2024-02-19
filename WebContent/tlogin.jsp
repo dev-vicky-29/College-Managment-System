@@ -11,6 +11,8 @@ if(request.getParameter("btnlogin")!=null) //Button Login Clicked
 	if(rs.next()){ //True or False
 	//Redirect to Admin Dashboard
 	session.setAttribute("user", user);
+	session.setAttribute("pass", pass);
+	
 	response.sendRedirect("Admin/admin.jsp");
 	} else {
 		session.setAttribute("user", null);
@@ -20,6 +22,7 @@ if(request.getParameter("btnlogin")!=null) //Button Login Clicked
 %>
 
 <!-- Teacher Login Page Specific Contents -->
+
 <div class="container">
 <form method="post" id="form1" class="form custom-border mt-8 rounded">
 <div class="col-5 offset-3"> <br>

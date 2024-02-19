@@ -10,6 +10,7 @@
 <th>Event ID</th>
 <th>Event Name</th>
 <th>Event Link</th>
+<th>Delete & Edit</th>
 </tr>
 
 <%
@@ -26,6 +27,14 @@ out.println("</td>");
 out.println("<td>");
 out.println(rs.getString(3));
 out.println("</td>");
+%>
+<td>
+<div class="mt-2 mb-2 d-flex justify-content-center">
+<input Type="submit" value="Edit" name="btnedit" class="btn btn-sm btn-primary"/>
+<input Type="submit" value="Delete" name="btnedit" class="btn btn-sm btn-primary"/>
+</div>
+</td>
+<%
 out.println("</tr>");	
 }
 %>

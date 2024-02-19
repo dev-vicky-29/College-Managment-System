@@ -58,11 +58,8 @@ Event Name
 Event Link
 <input name="ELink" class="form-control" value="<%=EventLink%>" placeholder="Enter Event Valid Link"/> <!-- Form Row -->
 </div>
-<div class="mt-2 mb-5 d-flex justify-content-between">
-<input Type="submit" value="Add Event" name="btninsert" class="btn btn-primary"/>
-<input Type="submit" value="Update Event" name="btnupdate" class="btn btn-secondary"/>
-<input Type="submit" value="Find Event" name="btnfind" class="btn btn-info"/>
-<input Type="submit" value="Delete Event" name="btndelete" class="btn btn-danger"/>
+<div class="mt-2 mb-2 d-flex justify-content-center">
+<input Type="submit" value="Add Event" name="btninsert" class="btn btn-lg btn-primary"/>
 </div>
 </form>
 </div>
