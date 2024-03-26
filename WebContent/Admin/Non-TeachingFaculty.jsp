@@ -5,7 +5,10 @@
 	<div>
 	<h2 class="text-center fw-bolder">Non-Teaching Faculty</h2>
 	</div>
-
+<div class="d-flex float-end">
+	<a type="button" class="btn btn-primary btn-sm" href="/College_Managment_System/Admin/AddNonTeachingFaculty.jsp">Add Non-Faculty</a>
+	</div>
+	
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <%
     ResultSet rs=db.getRows("select * from nonteachingfaculty");

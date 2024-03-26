@@ -51,51 +51,14 @@
 			successMsg="Teacher Faculty Added Successfully";
 			}
   	
-  		//Find Button Operation
-  		
-  		if (mrequest.getParameter("tbtnfind") != null) {
-  	        tID = mrequest.getParameter("tid");
-  	        // Use PreparedStatement to avoid SQL injection
-  	       ResultSet rs= db.getRows("SELECT * FROM teachingfaculty WHERE TeacherID=?", tID);
-  	        
-
-  	        if (rs.next()) {
-  	            tName = rs.getString("TeacherName");
-  	            tQualification = rs.getString("TeacherQualification");
-  	            tSubject = rs.getString("Subjects");
-  	            tLinkedIn = rs.getString("LinkedIn");
-  	          	fImgName = rs.getString("TeacherProfilePhoto");
-  	          fResumeName = rs.getString("TeacherResume");
-  	         } else {
-  	            // Handle the case when no record is found
-  	            errorMsg = "No record found for Teacher ID: " + tID;
-  	        }
-  		}
-  	        
-  		//Update Record Operation
-  		
-  		if(mrequest.getParameter("tbtnupdate")!=null){ //Update Button Clicked
-  				tID=mrequest.getParameter("tid");
-				tName=mrequest.getParameter("tname");
-				tQualification=mrequest.getParameter("tqualification");
-				tSubject=mrequest.getParameter("tsubject");
-				tLinkedIn=mrequest.getParameter("tLinkedIn");
-	
-	db.executeSql("update teachingfaculty set TeacherName=?,TeacherQualification=?,Subjects=?,LinkedIn=? where TeacherID=?" ,tName,tQualification,tSubject,tLinkedIn,tID); //This Line For Update Record Into Database Student table	
-	successMsg="Teaching Faculty Record Is Updated";
-  		}
-	
-  			//Delete Record Operation
-  			  	if(mrequest.getParameter("tbtndelete")!=null){ //Delete Button Clicked
-  			  	tID=mrequest.getParameter("tid");
-  			  		db.executeSql("Delete From teachingfaculty where TeacherID=?", tID); //This Line For Delete Record From Database teachingfaculty table	
-  			  	successMsg="Faculty Record Is Deleted";
-  			  	}
-  	}
+  		  	}
 	
   	
   %>
   <!-- Teacher Faculties Add, Update, Find & Delete Form -->
+   <div class="mt-2 mb-2  d-flex flex-row-reverse">
+    <a class="btn btn-primary pr-5" href="/College_Managment_System/Admin/TeachingFacultyList.jsp">Teaching Faculty List</a>
+</div>
 	<div class="card mt-5 col-7 offset-2">
 	<div class="card-header bg-info text-white">
 	<h4 class="text-center">Teaching Faculty Form</h4>
@@ -105,7 +68,7 @@
 	<form action="" method="post" enctype="multipart/form-data" id="TForm">
 	<div class="form-group">
 	Teacher ID
-	<input name="tid" class="form-control" autofocus value="<%=tID%>" placeholder="Enter Teacher ID"/> 
+	<input name="tid" class="form-control" autofocus value="<%=tID%>" placeholder="Enter Teacher ID" required/> 
 	</div>
 	<div class="form-group">
 	Teacher Name
@@ -131,11 +94,8 @@
 	  <label for="formFileResume" class="form-label">Teacher Resume File</label>
  	 <input name="tresume" class="form-control" value="<%=fResumeName%>" type="file" id="formFileResume">
 	</div>
-<div class="mt-2 mb-5 d-flex justify-content-between">
-		<input Type="submit" value="Add Facultie" name="tbtnadd" class="btn btn-primary"/>
-		<input Type="submit" value="Find Facultie" name="tbtnfind" class="btn btn-info"/>
-		<input Type="submit" value="Update Facultie" name="tbtnupdate" class="btn btn-secondary"/>
-		<input Type="submit" value="Delete Facultie" name="tbtndelete" class="btn btn-danger"/>	
+<div class="text-center d-grid gap-2">
+		<input Type="submit" value="Add Facultie" name="tbtnadd" class="btn btn-primary"/>	
 </div>
 </form>
 </div>
@@ -144,8 +104,8 @@
  
 <%@ include file="../footer.jsp"%>
 
-<!-- Add this script section after including jQuery -->
-<!-- 
+<!-- Add this script section after including jQuery
+
 <script>
   $(document).ready(function () {
     // Add validation rules
@@ -203,5 +163,4 @@
     });
   });
 </script>
-
  -->

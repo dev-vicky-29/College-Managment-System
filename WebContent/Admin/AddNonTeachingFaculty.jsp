@@ -37,52 +37,18 @@
 			successMsg="Non-Teaching Faculty Added Successfully";
 			}
   	
-  		//Find Button Operation
-  		
-  		if (mrequest.getParameter("ntbtnfind") != null) {
-  	        ntID = mrequest.getParameter("ntid");
-  	        // Use PreparedStatement to avoid SQL injection
-  	       ResultSet rs= db.getRows("SELECT * FROM nonteachingfaculty  WHERE SupportStaffID=?", ntID);
-  	        
-
-  	        if (rs.next()) {
-  	            ntName = rs.getString("SupportStaffName");
-  	            ntQualification = rs.getString("SupportStaffQualification");
-  	          ntfImgName = rs.getString("SupportStaffProfilePhoto");
-  	         } else {
-  	            // Handle the case when no record is found
-  	            errorMsg = "No record found for Support Staff ID: " + ntID;
-  	        }
-  		}
-  	        
-  		//Update Record Operation
-  		
-  		if(mrequest.getParameter("ntbtnupdate")!=null){ //Update Button Clicked
-  				ntID=mrequest.getParameter("ntid");
-				ntName=mrequest.getParameter("ntname");
-				ntQualification=mrequest.getParameter("ntqualification");
-	
-	db.executeSql("update nonteachingfaculty  set SupportStaffName=?,SupportStaffQualification=? where SupportStaffID=?" ,ntName,ntQualification,ntID); //This Line For Update Record Into Database nonteachingfaculty table	
-	successMsg="Non-Teaching Faculty Record Is Updated Successfully!";
-  		}
-	
-  			//Delete Record Operation
-  			  	if(mrequest.getParameter("ntbtndelete")!=null){ //Delete Button Clicked
-  			  	ntID=mrequest.getParameter("ntid");
-  			  		db.executeSql("Delete From nonteachingfaculty where SupportStaffID=?", ntID); //This Line For Delete Record From Database nonteachingfaculty table	
-  			  	successMsg="Non-Teaching Faculty Record Is Deleted Successfully!";
-  			  	}
-	
- 		}
+  		 		}
 
 %>
   
   <!-- Non-Teacher Faculties Add, Update, Find & Delete Form -->
   
-  
+  <div class="mt-2 mb-2  d-flex flex-row-reverse">
+    <a class="btn btn-primary pr-5" href="/College_Managment_System/Admin/NonTeachingFacultyList.jsp">Non Teaching Faculty List</a>
+</div>
 	<div class="card mt-5 col-7 offset-2">
 	<div class="card-header bg-info text-white">
-	<h4 class="text-center">Non-Teaching Faculties Form</h4>
+	<h4 class="text-center">Add Non-Teaching Faculties Form</h4>
 	</div>
 	<div class="card-body">
 	<!-- HTML FORM -->
@@ -103,11 +69,8 @@
 	  <label for="formFile" class="form-label">Teacher Image</label>
  	 <input name="ntimage" class="form-control" value="<%=ntfImgName %>" type="file" id="formFile">
 	</div>
-		<div class="mt-2 mb-5 d-flex justify-content-between">
-		<input Type="submit" value="Add Faculty" name="ntbtnadd" id="" class="btn btn-primary"/>
-		<input Type="submit" value="Update Faculty" name="ntbtnupdate" class="btn btn-secondary"/>
-		<input Type="submit" value="Find Faculty" name="ntbtnfind"  class="btn btn-info"/>
-		<input Type="submit" value="Delete Faculty" name="ntbtndelete" class="btn btn-danger"/>	
+		<div class="text-center d-grid gap-2">
+		<input Type="submit" value="Add Faculty" name="ntbtnadd" id="" class="btn btn-lg btn-primary"/>
 </div>
 </form>
 </div>

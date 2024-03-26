@@ -11,7 +11,7 @@
   </div>
   <div class="tab-content flex-fill" id="v-pills-tabContent">
     <div class="tab-pane fade show active" id="v-pills-about-us" role="tabpanel" aria-labelledby="v-pills-about-us-tab">
-	<h3 class="ml-3 text-decoration-underline">About Department</h3>
+	
 	<hr class="my-4">
 	<div class="jumbotron">
 	  <h2 class="text-center text-warning fw-bolder font-monospace text-decoration-underline">Department of Computer Science, Karad</h2> <br>
@@ -110,17 +110,15 @@
       <th scope="col">Sr.No</th>
       <th scope="col">Title</th>
       <th scope="col">Year</th>
-      <th scope="col">Class</th>
       <th scope="col">File</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><button type="button" class="btn btn-primary btn-sm">View</button></td>
+      <td>COs POs PSO</td>
+      <td>2023-24</td>
+      <td><a href="/College_Managment_System/pdf/copo.pdf" class="btn btn-info">View</a></td>
     </tr>
   </tbody>
 </table>

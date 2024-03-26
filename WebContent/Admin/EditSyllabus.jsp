@@ -95,7 +95,7 @@
 	<form action="" method="post" enctype="multipart/form-data">
 	<div class="form-group">
 	Sr. No.
-	<input name="essrno" class="form-control" autofocus value="<%=sSrNo%>" placeholder="Enter Sr. No. Of Syllabus"/> 
+	<input name="essrno" class="form-control" autofocus value="<%=sSrNo%>" placeholder="Enter Sr. No. Of Syllabus" /> 
 	</div>
 	<div class="form-group">
 	Syllabus Title
@@ -103,7 +103,7 @@
 	</div>
 	<div class="form-group">
 	Syllabus Class
-	<input name="essc" class="form-control" value="<%=sSClass%>" placeholder="Enter Class Of Syllabus"/> 
+	<input name="essc" class="form-control" value="<%=sSClass%>" placeholder="Enter Class Of Syllabus" required/> 
 	</div>
 	<div class="form-group mb-3">
 	  <label for="formFileResume" class="form-label">Syllabus File</label>

@@ -12,7 +12,7 @@
                 <th>Sr.No.</th>
                 <th>Title</th>
                 <th>Class</th>
-                <th>Links</th>
+                <th>Action</th>
             </tr>
         </thead>
         <%
@@ -26,7 +26,6 @@
                 <td><%=rs.getString(3) %></td>
                 <td class="d-flex justify-content-between">
                     <a href="/College_Managment_System/SyllabusFiles/<%=rs.getString(4)%>" class="btn btn-outline-info">View</a>
-                    <a href="/College_Management_System/SyllabusFiles/<%=rs.getString(4)%>" class="btn btn-outline-success downloadBtn">Download</a>
                 </td>
             </tr>
         </tbody>
